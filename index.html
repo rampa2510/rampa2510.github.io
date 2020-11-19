@@ -24,9 +24,11 @@
       property="og:description"
       content="Looking for a developer who is passionate about the work he does and always strives to improve his standards? Then you have come to the right place."
     />
-    <link rel="stylesheet" href="./index.css" />
-    <script src="https://cdn.jsdelivr.net/gh/WojciechWKROPCE/letterize-js/lib/letterize.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- <link rel="stylesheet" href="./css/vendor.css" /> -->
+    <!--    <script src="https://cdn.jsdelivr.net/gh/WojciechWKROPCE/letterize-js/lib/letterize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script> -->
   </head>
   <body>
     <nav>
@@ -43,27 +45,47 @@
         </div>
       </div>
     </nav>
+    <section id="intro">
+      <div class="intro-overlay"></div>
 
-    <header id="banner">
-      <div class="menu-container">
-        <img
-          onclick="openNav()"
-          style="margin-left: auto;width:35px;margin-right:20px"
-          src="./icons8-menu.svg"
-          alt="menu"
-        />
+      <div class="intro-content">
+        <div class="row">
+          <div class="col-twelve">
+            <h5>Hello, World.</h5>
+            <h1>I am Ram Pandey.</h1>
+
+            <p class="intro-position">
+              <span>Software Developer</span>
+              <span>Data Scientist</span>
+            </p>
+
+            <a class="button stroke smoothscroll" href="#about" title=""
+              >More About Me</a
+            >
+          </div>
+        </div>
       </div>
-      <div id="bannerContainer">
-        <img src="./heroImg-2.jpg" id="hero-img" />
-      </div>
-      <div id="animateMe">
-        Hi, I am
-        <div id="pink-span">Ram Pandey</div>
-      </div>
-      <div id="description">
-        A developer with a <span style="color:#FFFDD0;" id="cream-span">Diligent Soul.<span>
-      </div>
-    </header>
+      <!-- /intro-content -->
+
+      <ul class="intro-social">
+        <li>
+          <a href="https://github.com/rampa2510"
+            ><i class="fa fa-github"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://in.linkedin.com/in/rampa2510"
+            ><i class="fa fa-linkedin"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://instagram.com/rampa2510"
+            ><i class="fa fa-instagram"></i
+          ></a>
+        </li>
+      </ul>
+      <!-- /intro-social -->
+    </section>
   </body>
   <script src="./index.js"></script>
 </html>
