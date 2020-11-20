@@ -41,10 +41,21 @@
 
         <!-- Overlay content -->
         <div class="overlay-content">
-          <a href="#">About</a>
-          <a href="#">Services</a>
-          <a href="#">Clients</a>
-          <a href="#">Contact</a>
+          <a onclick="scrollToSection(event,'intro',true)" href="#intro"
+            >Intro</a
+          >
+          <a onclick="scrollToSection(event,'about',true)" href="#about"
+            >About</a
+          >
+          <a onclick="scrollToSection(event,'resume',true)" href="#resume"
+            >Resume</a
+          >
+          <a onclick="scrollToSection(event,'portfolio',true)" href="#portfolio"
+            >Portfolio</a
+          >
+          <a onclick="scrollToSection(event,'contact')" href="#contact"
+            >Contact</a
+          >
         </div>
       </div>
       <div id="menuCont">
@@ -71,7 +82,11 @@
               <span>Data Scientist</span>
             </p>
 
-            <a class="button stroke smoothscroll" href="#about" title=""
+            <a
+              onclick="scrollToSection(event,'about')"
+              class="button stroke smoothscroll"
+              href="#about"
+              title=""
               >More About Me</a
             >
           </div>
@@ -184,7 +199,11 @@
 
       <div class="row button-section">
         <div class="col-twelve">
-          <a href="#contact" title="Hire Me" class="button stroke smoothscroll"
+          <a
+            href="#contact"
+            title="Hire Me"
+            onclick="scrollToSection(event,'contact')"
+            class="button stroke smoothscroll"
             >Hire Me</a
           >
           <a
@@ -397,7 +416,10 @@
                   src="https://raw.githubusercontent.com/rampa2510/policebot/master/Images/registerL.png"
                   alt="PoliceBot"
                 />
-                <a href="#modal-03" class="overlay">
+                <a
+                  href="https://github.com/rampa2510/policebot"
+                  class="overlay"
+                >
                   <div class="folio-item-table">
                     <div class="folio-item-cell">
                       <h3 class="folio-title">PoliceBot</h3>
@@ -412,10 +434,13 @@
             <div class="bgrid folio-item">
               <div class="item-wrap">
                 <img
-                  src="https://raw.githubusercontent.com/rampa2510/school-website/master/readmeImages/img1.png"
+                  src="https://raw.githubusercontent.com/rampa2510/school-website/master/readmeImages/img2.png"
                   alt="School Website"
                 />
-                <a href="#modal-04" class="overlay">
+                <a
+                  href="https://github.com/rampa2510/school-website"
+                  class="overlay"
+                >
                   <div class="folio-item-table">
                     <div class="folio-item-cell">
                       <h3 class="folio-title">School Website</h3>
@@ -433,7 +458,10 @@
                   src="https://raw.githubusercontent.com/YashMeh/panda-portfolio/master/images/dark.png"
                   alt="Panda-Portfolio"
                 />
-                <a href="#modal-05" class="overlay">
+                <a
+                  href="https://github.com/rampa2510/panda-portfolio"
+                  class="overlay"
+                >
                   <div class="folio-item-table">
                     <div class="folio-item-cell">
                       <h3 class="folio-title">Panda Portfolio</h3>
@@ -451,7 +479,7 @@
                   src="https://raw.githubusercontent.com/rampa2510/gitesy/master/files/gitesy.gif"
                   alt="Gitesy"
                 />
-                <a href="#modal-06" class="overlay">
+                <a href="https://github.com/rampa2510/gitesy" class="overlay">
                   <div class="folio-item-table">
                     <div class="folio-item-cell">
                       <h3 class="folio-title">Gitesy</h3>
@@ -486,9 +514,65 @@
       </div>
       <!-- /portfolio-content -->
     </section>
+    <section id="contact">
+      <!-- /section-intro -->
+      <div class="row section-intro">
+        <div class="col-twelve">
+          <h5>Contact</h5>
+          <h1>Want to know more?</h1>
+
+          <p class="lead">
+            Becoming a software developer has enabled me with opportunities to
+            meet some of the best minds. People in this field have been very
+            friendly and helpful, I have done the same with the people
+            approaching me. I would love to connect with more enthusiastic minds
+            working as in the field of software engineering. If you would like
+            to connect with me, please do so via the following mediums.
+          </p>
+        </div>
+      </div>
+      <!-- /contact-form -->
+
+      <div class="row contact-info">
+        <div class="col-four tab-full">
+          <div class="icon">
+            <i class="icon-pin"></i>
+          </div>
+
+          <h5>Where to find me</h5>
+
+          <p>
+            1720, 24, kalachowki<br />
+            Abhudaya Nagar, MHB colony<br />
+            Mumbai - 400033, India
+          </p>
+        </div>
+
+        <div class="col-four tab-full collapse">
+          <div class="icon">
+            <i class="icon-mail"></i>
+          </div>
+
+          <h5>Email Me At</h5>
+
+          <p>iamram2510@gmail.com</p>
+        </div>
+
+        <div class="col-four tab-full">
+          <div class="icon">
+            <i class="icon-phone"></i>
+          </div>
+
+          <h5>Call Me At</h5>
+
+          <p>(+91) 7021293874</p>
+        </div>
+      </div>
+      <!-- /contact-info -->
+    </section>
   </body>
   <div id="preloader">
     <div id="loader"></div>
   </div>
-  <script src="./js/index.js"></script>
+  <script defer src="./js/index.js"></script>
 </html>
