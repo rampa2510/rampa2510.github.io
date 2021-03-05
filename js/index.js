@@ -90,14 +90,6 @@ const blogs = [
   {
     plat: "linkedin.com",
     title:
-      "Docker from a beginner's perspective: Understanding some essential commands used in Docker world",
-    link:
-      "https://www.linkedin.com/pulse/docker-from-beginners-perspective-understanding-some-essential-ram/?trackingId=jC5YX58cB7roLhDybB0cIw%3D%3D",
-  },
-
-  {
-    plat: "linkedin.com",
-    title:
       "How to code a multiple-input handler method in React.js or React-Native",
     link:
       "https://www.linkedin.com/pulse/how-code-multiple-input-handler-method-reactjs-ram-pandey/?trackingId=Yts55EGfJJ1kQqCi7UTHdw%3D%3D",
@@ -108,6 +100,12 @@ const blogs = [
     title: "Docker from a beginner's perspective: What, Why and How of Docker?",
     link:
       "https://www.linkedin.com/pulse/docker-101-part-1-what-why-how-ram-pandey/?trackingId=K3V%2Fo9MlCEOpuVX1LbB5Aw%3D%3D",
+  },
+  {
+    plat: "linkedin.com",
+    title: "Debunking Tech Jargons",
+    link:
+      "https://www.linkedin.com/pulse/debunking-jargons-backend-development-rest-apis-endpoints-ram-pandey",
   },
 ];
 
