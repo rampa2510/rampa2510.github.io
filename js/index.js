@@ -91,53 +91,72 @@ const blogs = [
     plat: "linkedin.com",
     title:
       "How to code a multiple-input handler method in React.js or React-Native",
-    link:
-      "https://www.linkedin.com/pulse/how-code-multiple-input-handler-method-reactjs-ram-pandey/?trackingId=Yts55EGfJJ1kQqCi7UTHdw%3D%3D",
+    link: "https://www.linkedin.com/pulse/how-code-multiple-input-handler-method-reactjs-ram-pandey/?trackingId=Yts55EGfJJ1kQqCi7UTHdw%3D%3D",
   },
 
   {
     plat: "linkedin.com",
     title: "Docker from a beginner's perspective: What, Why and How of Docker?",
-    link:
-      "https://www.linkedin.com/pulse/docker-101-part-1-what-why-how-ram-pandey/?trackingId=K3V%2Fo9MlCEOpuVX1LbB5Aw%3D%3D",
+    link: "https://www.linkedin.com/pulse/docker-101-part-1-what-why-how-ram-pandey/?trackingId=K3V%2Fo9MlCEOpuVX1LbB5Aw%3D%3D",
   },
   {
     plat: "linkedin.com",
     title: "Debunking Tech Jargons",
-    link:
-      "https://www.linkedin.com/pulse/debunking-jargons-backend-development-rest-apis-endpoints-ram-pandey",
+    link: "https://www.linkedin.com/pulse/debunking-jargons-backend-development-rest-apis-endpoints-ram-pandey",
+  },
+  {
+    plat: "dev.to",
+    title: "Guide to building Multi-Tenant",
+    link: "https://dev.to/rampa2510/guide-to-building-multi-tenant-architecture-in-nodejs-40og",
+  },
+  {
+    plat: "dev.to",
+    title: "MongoDB Replication Why and How?",
+    link: "https://dev.to/rampa2510/mongodb-replication-why-and-how-53c5",
+  },
+  {
+    plat: "dev.to",
+    title: "Advice for Intermediate developers",
+    link: "https://dev.to/rampa2510/mongodb-replication-why-and-how-53c5",
   },
 ];
 
 function appendBlog() {
   const ele = document.querySelector(".blog-info");
+  ele.style.display = "grid";
+  ele.style.gridTemplateColumns = "repeat(auto-fit, minmax(250px, 1fr))";
+  ele.style.gap = "20px";
+  ele.style.padding = "20px";
 
   blogs.forEach((d) => {
-    const pText = document.createTextNode("Platform :- " + d.plat);
-    const p = document.createElement("p");
-    p.className = "plat";
-    p.appendChild(pText);
+    const card = document.createElement("div");
+    card.className = "blog-card";
+    card.style.border = "1px solid #ddd";
+    card.style.borderRadius = "8px";
+    card.style.padding = "15px";
+    card.style.boxShadow = "0 2px 5px rgba(0,0,0,0.1)";
+    card.style.backgroundColor = "#fff";
+    card.style.transition = "transform 0.3s ease-in-out";
+
     const title = d.title.length > 40 ? d.title.substr(0, 40) + "..." : d.title;
-    const bText = document.createTextNode("Title :- " + title);
-    const b = document.createElement("b");
-    b.appendChild(bText);
-    const h4 = document.createElement("h4");
-    h4.appendChild(b);
-    const textDiv = document.createElement("div");
-    textDiv.className = "text-cont";
-    textDiv.appendChild(h4);
-    textDiv.appendChild(p);
-    const cardDiv = document.createElement("div");
-    cardDiv.className = "card-cont";
-    cardDiv.appendChild(textDiv);
-    const a = document.createElement("a");
-    a.href = d.link;
-    a.appendChild(cardDiv);
-    const div = document.createElement("div");
-    div.className = "col-four";
-    div.style = "padding-bottom:20px";
-    div.appendChild(a);
-    ele.appendChild(div);
+
+    card.innerHTML = `
+      <h4 style="margin-top: 0; color: #333;">${title}</h4>
+      <p style="color: #666; font-size: 0.9em;">Platform: ${d.plat}</p>
+      <a href="${d.link}" target="_blank" style="display: inline-block; margin-top: 10px; color: #007bff; text-decoration: none;">Read More</a>
+    `;
+
+    card.addEventListener("mouseover", () => {
+      card.style.transform = "translateY(-5px)";
+    });
+
+    card.addEventListener("mouseout", () => {
+      card.style.transform = "translateY(0)";
+    });
+
+    ele.appendChild(card);
   });
 }
-appendBlog();
+
+// Make sure to call this function after the DOM is loaded
+document.addEventListener("DOMContentLoaded", appendBlog);
