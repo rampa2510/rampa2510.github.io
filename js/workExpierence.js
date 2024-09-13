@@ -91,7 +91,6 @@ function createTimelineBlock(job) {
 
 function renderTimeline() {
   const container = document.querySelector(".timeline-wrap");
-  console.log(container);
   const timelineHTML = workExperience.map(createTimelineBlock).join("");
   container.innerHTML = timelineHTML;
 }

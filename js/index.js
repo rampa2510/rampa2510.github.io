@@ -36,13 +36,13 @@ function onLoad() {
 }
 
 function scrollToSection(event, section, isMenu = false) {
+  if (isMenu) closeNav();
   if (supportsSmoothScrolling()) {
     return;
   }
   event.preventDefault();
   const scrollToElem = document.getElementById(section);
   SmoothVerticalScrolling(scrollToElem, 300, "top");
-  if (isMenu) closeNav();
 }
 
 function supportsSmoothScrolling() {
