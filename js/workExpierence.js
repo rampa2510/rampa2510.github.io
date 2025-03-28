@@ -1,7 +1,13 @@
 const workExperience = [
   {
+    title: "Senior Software Engineer",
+    period: "Nov 2024 - March 2024",
+    company: "Eightydays.ai",
+    description: "Optimized system performance for high workloads and developed client-requested features. Led development of an in-house Shopify affiliate management app. Managed development team and oversaw multiple projects including an internal admin dashboard, Shopify app, SARAL app features, and a social listening tool."
+  },
+  {
     title: "Backend Developer",
-    period: "Dec 2023 - Sep 2023",
+    period: "Dec 2023 - Sep 2024",
     company: "SARAL",
     description:
       "Optimized system performance for high workloads and developed client-requested features. Led development of an in-house Shopify affiliate management app. Managed development team and oversaw multiple projects including an internal admin dashboard, Shopify app, SARAL app features, and a social listening tool.",
